@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF 元数据批量编辑器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF 元数据批量编辑器</h1>
+        <div class="upload-area">
+            <input type="file" id="pdf-upload" accept=".pdf" multiple />
+            <label for="pdf-upload">选择 PDF 文件（可多选）</label>
+        </div>
+        <div id="upload-status" class="status-message"></div>
+        <div id="file-list"></div>
+        <div id="metadata-form" style="display: none;">
+            <h2>批量编辑元数据</h2>
+            <form id="pdf-metadata">
+                <label for="title">标题:</label>
+                <input type="text" id="title" name="title">
+                
+                <label for="author">作者:</label>
+                <input type="text" id="author" name="author">
+                
+                <label for="subject">主题:</label>
+                <input type="text" id="subject" name="subject">
+                
+                <label for="keywords">关键词:</label>
+                <input type="text" id="keywords" name="keywords">
+                
+                <button type="submit">批量保存修改</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
